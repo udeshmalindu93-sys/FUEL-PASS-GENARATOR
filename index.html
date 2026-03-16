@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Pass Generator - Miutech</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <h2>Fuel Pass Generator</h2>
+        <input type="text" id="userName" placeholder="ඔබේ නම">
+        <input type="text" id="vehicleNumber" placeholder="වාහන අංකය">
+        <button onclick="generate()">Generate Pass</button>
+
+        <div id="fuel-card" class="card" style="display:none;">
+            <div class="card-header">SRI LANKA FUEL PASS</div>
+            <div id="qrcode"></div>
+            <div class="user-info">
+                <h4 id="display-name">Name</h4>
+                <p id="display-vehicle">Vehicle Number</p>
+            </div>
+            <div class="logos">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/23/CPC_Logo.png" alt="Ceypetco">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Lanka_IOC_Logo.svg/1200px-Lanka_IOC_Logo.svg.png" alt="LIOC">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Sinopec_logo.svg/1200px-Sinopec_logo.svg.png" alt="Sinopec">
+            </div>
+            <div class="footer-text">Created by Miutech mobile</div>
+        </div>
+
+        <br>
+        <button id="downloadBtn" style="display:none;" onclick="downloadImage()">Download Pass</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
